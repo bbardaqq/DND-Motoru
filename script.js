@@ -8,11 +8,12 @@ function showCalculation(option) {
     }
 }
 
-// A Seçeneği hesaplaması: İki sayıyı toplar
+// A Seçeneği hesaplaması: Vuruş İhtimalini Hesaplar
 function calculateA() {
     const num1 = parseFloat(document.getElementById('aNum1').value);
     const num2 = parseFloat(document.getElementById('aNum2').value);
-    const result = num1 + num2; // Toplama işlemi
+    const num3 = parseFloat(document.getElementById('aNum3').value);
+    const result = num1 - num2 + num3; // Hesaplama
     document.getElementById('resultA').textContent = isNaN(result) ? 'Geçersiz giriş!' : result;
 }
 

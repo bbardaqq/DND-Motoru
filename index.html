@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İki Seçenekli Hesaplama Makinesi</title>
+    <title>DND-Hesap Makinesi</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         #options, #calculationA, #calculationB { margin-top: 20px; }
@@ -13,20 +13,21 @@
     </style>
 </head>
 <body>
-    <h1>İki Seçenekli Hesaplama Makinesi</h1>
+    <h1>DND-Hesap Makinesi</h1>
 
     <!-- Seçim Alanı -->
     <div id="options">
         <h2>Bir seçenek belirleyin:</h2>
-        <button onclick="showCalculation('A')">A Seçeneği</button>
+        <button onclick="showCalculation('A')">Vuruş İhtimali</button>
         <button onclick="showCalculation('B')">B Seçeneği</button>
     </div>
 
     <!-- A Seçeneği için Form -->
     <div id="calculationA">
-        <h2>A Seçeneği: Sayıların Toplamı</h2>
-        <input type="number" id="aNum1" placeholder="Sayı 1">
-        <input type="number" id="aNum2" placeholder="Sayı 2"><br>
+        <h2>Vuruş İhtimali: Çarpanları Girin</h2>
+        <input type="number" id="aNum1" placeholder="ACC">
+        <input type="number" id="aNum2" placeholder="Dodge">
+        <input type="number" id="aNum3" placeholder="Bonus (varsa)">        <br>
         <button onclick="calculateA()">Hesapla</button>
         <h3>Sonuç: <span id="resultA">0</span></h3>
         <button onclick="reset()">Geri Dön</button>
