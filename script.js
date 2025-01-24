@@ -19,9 +19,16 @@ function calculateA() {
 
 // B Seçeneği hesaplaması: Bir sayının karesini alır
 function calculateB() {
-    const num = parseFloat(document.getElementById('bNum').value);
-    const result = num * num; // Karesini alma işlemi
-    document.getElementById('resultB').textContent = isNaN(result) ? 'Geçersiz giriş!' : result;
+    const num1 = parseFloat(document.getElementById('bNum1').value); //aralik1 buyuk olan
+    const num2 = parseFloat(document.getElementById('bNum2').value); //aralik2 kucuk olan
+    const num3 = parseFloat(document.getElementById('bNum3').value); //ek hasar yuzdelik olarak girilecek
+    const num4 = parseFloat(document.getElementById('bNum4').value); //base skill puanı tam haliyle girilecek
+
+    const num5 = Math.floor(Math.random() * ((num1 - num2) + 1)) + num2; // Vurus araligindan rastgele sayi ceker. Ornegin 10-15 ise 10-15 arasindan bir sayi ceker.
+    const num6 = 1+ (num3/100); // Yuzdelik hasar hesabi
+    const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir.
+    const result = num5*num6*num7; // Hesaplama
+    document.getElementById('resultB').textContent = result;
 }
 
 // Ana menüye dönüş
