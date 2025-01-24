@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Seçenekli Hesaplama Makinesi</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        #options, #calculationA, #calculationB { margin-top: 20px; }
+        #calculationA, #calculationB { display: none; }
+        input, button { margin: 5px; padding: 10px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>İki Seçenekli Hesaplama Makinesi</h1>
+
+    <!-- Seçim Alanı -->
+    <div id="options">
+        <h2>Bir seçenek belirleyin:</h2>
+        <button onclick="showCalculation('A')">A Seçeneği</button>
+        <button onclick="showCalculation('B')">B Seçeneği</button>
+    </div>
+
+    <!-- A Seçeneği için Form -->
+    <div id="calculationA">
+        <h2>A Seçeneği: Sayıların Toplamı</h2>
+        <input type="number" id="aNum1" placeholder="Sayı 1">
+        <input type="number" id="aNum2" placeholder="Sayı 2"><br>
+        <button onclick="calculateA()">Hesapla</button>
+        <h3>Sonuç: <span id="resultA">0</span></h3>
+        <button onclick="reset()">Geri Dön</button>
+    </div>
+
+    <!-- B Seçeneği için Form -->
+    <div id="calculationB">
+        <h2>B Seçeneği: Sayının Karesi</h2>
+        <input type="number" id="bNum" placeholder="Bir sayı girin"><br>
+        <button onclick="calculateB()">Hesapla</button>
+        <h3>Sonuç: <span id="resultB">0</span></h3>
+        <button onclick="reset()">Geri Dön</button>
+    </div>
+
+    <script>
+        // İlgili hesaplama formunu gösterir
+        function showCalculation(option) {
+            document.getElementById('options').style.display = 'none';
+            if (option === 'A') {
+                document.getElementById('calculationA').style.display = 'block';
+            } else if (option === 'B') {
+                document.getElementById('calculationB').style.display = 'block';
+            }
+        }
+
+        // A Seçeneği hesaplaması
+        function calculateA() {
+            const num1 = parseFloat(document.getElementById('aNum1').value);
+            const num2 = parseFloat(document.getElementById('aNum2').value);
+            const result = num1 + num2; // Toplama işlemi
+            document.getElementById('resultA').textContent = result;
+        }
+
+        // B Seçeneği hesaplaması
+        function calculateB() {
+            const num = parseFloat(document.getElementById('bNum').value);
+            const result = num * num; // Karesini alma işlemi
+            document.getElementById('resultB').textContent = result;
+        }
+
+        // Ana menüye dönüş
+        function reset() {
+            document.getElementById('options').style.display = 'block';
+            document.getElementById('calculationA').style.display = 'none';
+            document.getElementById('calculationB').style.display = 'none';
+            document.getElementById('resultA').textContent = '0';
+            document.getElementById('resultB').textContent = '0';
+        }
+    </script>
+</body>
+</html>
