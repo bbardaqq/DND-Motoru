@@ -14,8 +14,8 @@ function calculateA() {
     const num2 = parseFloat(document.getElementById('aNum2').value);
     const num3 = parseFloat(document.getElementById('aNum3').value);
     const num4 = ((num1 - num2) + num3); // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
-    const minOran = 0.05; // %5
-    const maxOran = 0.95; // %95
+    const minOran = 5; // %5
+    const maxOran = 95; // %95
     const num5 = Math.max(minOran, Math.min(maxOran, num4)) / 100; // Oranı sınırlıyoruz. %5 ile %95 arasında olacak. Kesin vuruş veya kesin kaçırma olmayacak.
 
     const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
