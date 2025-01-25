@@ -1,45 +1,35 @@
-/* Body arkaplan ayarı */
 body {
-    background-image: url('images/background.jpg'); /* Arkaplan resmi */
-    background-size: cover; /* Resim tüm ekranı kaplar */
-    background-position: center; /* Resmi ortalar */
-    background-repeat: no-repeat; /* Resim tekrar etmez */
-    font-family: Arial, sans-serif; /* Yazı tipi */
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    padding: 20px;
+    height: 100%;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Arka planın kaydırılması gerektiği gibi yapılır */
+    height: 100%; /* Sayfa yüksekliği %100 yapılır */
+    padding: 0; 
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
-/* Başlık için stil */
-h1 {
-    color: white; /* Başlık rengi */
-    text-shadow: 2px 2px 4px #000; /* Başlığa gölge efekti */
-}
-
-/* Butonlar için stil */
 button {
-    margin: 10px;
+    margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-/* Buton hover efekti */
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Input alanları için stil */
 input {
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    color: #333;
 }
