@@ -13,11 +13,24 @@ function calculateA() {
     const num1 = parseFloat(document.getElementById('aNum1').value);
     const num2 = parseFloat(document.getElementById('aNum2').value);
     const num3 = parseFloat(document.getElementById('aNum3').value);
-    const result = (num1 - num2) + num3; // Hesaplama
-    document.getElementById('resultA').textContent = isNaN(result) ? 'Geçersiz giriş!' : result;
+    const num4 = ((num1 - num2) + num3)/100; // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
+    const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
+
+    if(num4 > 0.90) {   //%90'dan fazla ise %90 olarak hesaplar. Kesin vurus istemiyoruz.
+        num4 = 0.90;
+    } else if(num4 < 0.10) { //%10'dan az ise %10 olarak hesaplar. Kesin kacirma istemiyoruz.
+        num4 = 0.10;
+    }
+    if (rastgelesayi < num4) {
+        
+        document.getElementById("resultA").innerText = "Vurus Basarili";
+        } else {
+        document.getElementById("resultA").innerText = "Vurus Basarisiz";
+        }
+    //document.getElementById('resultA').textContent = result;
 }
 
-// B Seçeneği hesaplaması: Bir sayının karesini alır
+// B Seçeneği hesaplaması: Hasarı Hesaplar
 function calculateB() {
     const num1 = parseFloat(document.getElementById('bNum1').value); //aralik1 buyuk olan
     const num2 = parseFloat(document.getElementById('bNum2').value); //aralik2 kucuk olan
