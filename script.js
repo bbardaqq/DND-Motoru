@@ -18,8 +18,8 @@ function calculateA() {
     const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
     const minOran = 0.05; // %5
     const maxOran = 0.95; // %95
-    num5 = Math.max(minOran, Math.min(maxOran, oran)); // Oranı sınırlıyoruz. %5 ile %95 arasında olacak. Kesin vuruş veya kesin kaçırma olmayacak.
-    
+    num5 = Math.max(minOran, Math.min(maxOran, num5)); // Oranı sınırlıyoruz. %5 ile %95 arasında olacak. Kesin vuruş veya kesin kaçırma olmayacak.
+
     document.getElementById("resultC").textContent = num5;
     if (rastgelesayi < num5) {
         
