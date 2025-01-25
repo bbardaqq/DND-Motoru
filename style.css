@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
+    background-image: url('images/background.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın tüm ekranı kaplaması için */
+    background-position: center; /* Fotoğrafın merkezlenmesi */
+    background-repeat: no-repeat; /* Fotoğrafın tekrar etmesini önler */
+    margin: 0;
+    padding: 0;
 }
 
 button {
