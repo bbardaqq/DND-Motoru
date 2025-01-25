@@ -13,15 +13,16 @@ function calculateA() {
     const num1 = parseFloat(document.getElementById('aNum1').value);
     const num2 = parseFloat(document.getElementById('aNum2').value);
     const num3 = parseFloat(document.getElementById('aNum3').value);
-    const num4 = ((num1 - num2) + num3)/100; // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
+    const num4 = ((num1 - num2) + num3); // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
+    const num5 = num4/100; //Yuzdelik orani
     const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
 
-    if(num4 > 0.90) {   //%90'dan fazla ise %90 olarak hesaplar. Kesin vurus istemiyoruz.
-        num4 = 0.90;
-    } else if(num4 < 0.10) { //%10'dan az ise %10 olarak hesaplar. Kesin kacirma istemiyoruz.
-        num4 = 0.10;
+    if(num5 > 0.90) {   //%90'dan fazla ise %90 olarak hesaplar. Kesin vurus istemiyoruz.
+        num5 == 0.90;
+    } else if(num5 < 0.10) { //%10'dan az ise %10 olarak hesaplar. Kesin kacirma istemiyoruz.
+        num5 == 0.10;
     }
-    if (rastgelesayi < num4) {
+    if (rastgelesayi < num5) {
         
         document.getElementById("resultA").innerText = "Vurus Basarili";
         } else {
