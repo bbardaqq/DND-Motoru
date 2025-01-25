@@ -27,7 +27,7 @@ function calculateA() {
         num6 == num5;
     }
     document.getElementById("resultC").textContent = num6;
-    if (rastgelesayi < num5) {
+    if (rastgelesayi < num6) {
         
         document.getElementById("resultA").innerText = "Vurus Basarili";
         } else {
