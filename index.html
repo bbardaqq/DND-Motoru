@@ -30,6 +30,7 @@
         <input type="number" id="aNum3" placeholder="Bonus (varsa)">        <br>
         <button onclick="calculateA()">Hesapla</button>
         <h3>Sonuç: <span id="resultA">0</span></h3>
+        <h3>Oran: <span id="resultC">0</span></h3>
         <button onclick="reset()">Geri Dön</button>
     </div>
 
@@ -70,6 +71,7 @@
             } else if(num5 < 0.10) { //%10'dan az ise %10 olarak hesaplar. Kesin kacirma istemiyoruz.
                 num5 == 0.10;
             }
+            document.getElementById("resultC").textContent = num5;
             if (rastgelesayi < num5) {
                 
                 document.getElementById("resultA").innerText = "Vurus Basarili";
