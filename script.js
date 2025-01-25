@@ -15,19 +15,13 @@ function calculateA() {
     const num3 = parseFloat(document.getElementById('aNum3').value);
     const num4 = ((num1 - num2) + num3); // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
     const num5 = num4/100; //Yuzdelik orani
-    const num6 = 1;
     const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
-
-    if(num5 > 0.90) {   //%90'dan fazla ise %90 olarak hesaplar. Kesin vurus istemiyoruz.
-        num6 == 0.90;
-    } else if(num5 < 0.10) { //%10'dan az ise %10 olarak hesaplar. Kesin kacirma istemiyoruz.
-        num6 == 0.10;
-    }
-    else {
-        num6 == num5;
-    }
-    document.getElementById("resultC").textContent = num6;
-    if (rastgelesayi < num6) {
+    const minOran = 0.05; // %5
+    const maxOran = 0.95; // %95
+    num5 = Math.max(minOran, Math.min(maxOran, oran)); // Oranı sınırlıyoruz. %5 ile %95 arasında olacak. Kesin vuruş veya kesin kaçırma olmayacak.
+    
+    document.getElementById("resultC").textContent = num5;
+    if (rastgelesayi < num5) {
         
         document.getElementById("resultA").innerText = "Vurus Basarili";
         } else {
@@ -35,6 +29,7 @@ function calculateA() {
         }
     //document.getElementById('resultA').textContent = result;
 }
+
 
 // B Seçeneği hesaplaması: Hasarı Hesaplar
 function calculateB() {
