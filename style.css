@@ -12,11 +12,9 @@ body {
 }
 
 .output {
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Beyaz arka plan, hafif saydamlık */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
+    color: white; /* Yazı rengi beyaz */
+    font-weight: bold; /* Daha belirgin olsun diye kalın yazı */
+    font-size: 18px; /* Yazı boyutunu biraz büyüt */
 }
 
 button {
