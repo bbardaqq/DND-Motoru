@@ -36,7 +36,7 @@
         <input type="number" id="aNum3" placeholder="Bonus (varsa)">        <br>
         <button onclick="calculateA()">Hesapla</button>
         <h3>Sonuç: <span id="resultA" class="output">0</span></h3>
-        <h3>Oran: <span id="resultC" class="output">0</span></h3>
+      <!-- <h3>Oran: <span id="resultC" class="output">0</span></h3> -->
         <button onclick="reset()">Geri Dön</button>
     </div>
 
@@ -75,7 +75,7 @@
 
             const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
              
-            document.getElementById("resultC").textContent = num5;
+            // document.getElementById("resultC").textContent = num5;
             if (rastgelesayi < num5) {
                 
                 document.getElementById("resultA").innerText = "Vurus Basarili";

@@ -20,7 +20,7 @@ function calculateA() {
 
     const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
      
-    document.getElementById("resultC").textContent = num5;
+    // document.getElementById("resultC").textContent = num5;
     if (rastgelesayi < num5) {
         
         document.getElementById("resultA").innerText = "Vurus Basarili";
