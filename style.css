@@ -1,29 +1,54 @@
 body {
-    font-family: Arial, sans-serif; 
-    text-align: center; 
-    padding: 20px;
-    height: 100%;
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll; /* Arka planın kaydırılması gerektiği gibi yapılır */
-    height: 100%; /* Sayfa yüksekliği %100 yapılır */
-    padding: 0; 
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
+    padding: 20px;
+    background-image: url('images/background.jpg'); /* Arka plan resmi */
+    background-size: cover; /* Resim tüm alanı kaplar */
+    background-position: center; /* Ortalanmış */
+    background-repeat: no-repeat; /* Tekrar etmez */
+    background-attachment: fixed; /* Sayfa kaydırıldığında arka plan sabit kalır */
+    
 }
 
 button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
+    background-color: #007bff; /* Mavi buton */
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+/* Buton Hover Efekti */
+button:hover {
+    background-color: #0056b3; /* Hover'da daha koyu mavi */
+}
+
+/*image {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px; 
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100%; 
+    padding: 0; 
+    margin: 0;
+}
+*/
 input {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
 }
 
 .hidden {
@@ -31,5 +56,6 @@ input {
 }
 
 h1, h2 {
-    color: #333;
+    color: #fff; /* Başlık yazı rengi beyaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hafif gölge efekti */
 }
