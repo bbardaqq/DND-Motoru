@@ -61,7 +61,7 @@ input {
     display: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #fff; /* Başlık yazı rengi beyaz */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hafif gölge efekti */
 }
