@@ -91,3 +91,13 @@ h1, h2, h3 {
     border-left: 2px solid white;
     padding-left: 8px;
 }
+
+.log-success {
+    color: #6aff6a; /* yeşil */
+    font-weight: bold;
+}
+
+.log-fail {
+    color: #ff6a6a; /* kırmızı */
+    font-weight: bold;
+}

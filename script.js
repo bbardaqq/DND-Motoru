@@ -62,5 +62,10 @@ function logMessage(msg) {
     const li = document.createElement("li");
     const time = new Date().toLocaleTimeString();
     li.textContent = `[${time}] ${msg}`;
+    if (msg.includes("Basarili")) {
+        li.classList.add("log-success");
+    } else if (msg.includes("Basarisiz")) {
+        li.classList.add("log-fail");
+    }
     logList.prepend(li); // En üste ekle
 }
