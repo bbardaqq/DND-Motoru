@@ -51,66 +51,13 @@
         <h3>Sonuç: <span id="resultB" class="output">0</span></h3>
         <button onclick="reset()">Geri Dön</button>
     </div>
-
-    <script>
-        // İlgili hesaplama formunu gösterir
-        function showCalculation(option) {
-            document.getElementById('options').style.display = 'none';
-            if (option === 'A') {
-                document.getElementById('calculationA').style.display = 'block';
-            } else if (option === 'B') {
-                document.getElementById('calculationB').style.display = 'block';
-            }
-        }
-
-        // A Seçeneği hesaplaması
-        function calculateA() {
-            const num1 = parseFloat(document.getElementById('aNum1').value);
-            const num2 = parseFloat(document.getElementById('aNum2').value);
-            const num3 = parseFloat(document.getElementById('aNum3').value);
-            const num4 = ((num1 - num2) + num3); // Yuzdelik Hesaplama - Ornegin sonuc 65 ise 0,65 olarak hesaplar. 100 olursa 1 olur ve vurus kesinlesir.
-            const minOran = 5; // %5
-            const maxOran = 95; // %95
-            const num5 = Math.max(minOran, Math.min(maxOran, num4)) / 100; // Oranı sınırlıyoruz. %5 ile %95 arasında olacak. Kesin vuruş veya kesin kaçırma olmayacak.
-
-            const rastgelesayi = Math.random(); // Rastgele sayi cekme - bunu yuzdelikle karsilastirarak vurus yapilip yapilmayacagini belirleyecegiz.
-             
-            // document.getElementById("resultC").textContent = num5;
-            if (rastgelesayi < num5) {
-                
-                document.getElementById("resultA").innerText = "Vurus Basarili";
-                } else {
-                document.getElementById("resultA").innerText = "Vurus Basarisiz";
-                }
-            //document.getElementById('resultA').textContent = result;
-        }
-
-        // B Seçeneği hesaplaması
-        function calculateB() {
-            const num1 = parseFloat(document.getElementById('bNum1').value); //aralik1 buyuk olan
-            const num2 = parseFloat(document.getElementById('bNum2').value); //aralik2 kucuk olan
-            const num3 = parseFloat(document.getElementById('bNum3').value); //ek hasar yuzdelik olarak girilecek
-            const num4 = parseFloat(document.getElementById('bNum4').value); //base skill puanı tam haliyle girilecek
-
-            const num5 = Math.floor(Math.random() * ((num1 - num2) + 1)) + num2; // Vurus araligindan rastgele sayi ceker. Ornegin 10-15 ise 10-15 arasindan bir sayi ceker.
-            const num6 = 1+ (num3/100); // Yuzdelik hasar hesabi
-            const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir.
-            const result = num5*num6*num7; // Hesaplama
-            document.getElementById('resultB').textContent = result;
-        }
-
-        // Ana menüye dönüş
-        function reset() {
-            document.getElementById('options').style.display = 'block';
-            document.getElementById('calculationA').style.display = 'none';
-            document.getElementById('calculationB').style.display = 'none';
-            document.getElementById('resultA').textContent = '0';
-            document.getElementById('resultB').textContent = '0';
-        }
-    </script>
+    <!-- Log Box -->
     <div id="battleLog" class="log-box">
         <h3>Battle Log</h3>
         <ul id="logList"></ul>
       </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
