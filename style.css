@@ -68,16 +68,21 @@ h1, h2, h3 {
 
 /* Battle Log */
 .log-box {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
     border: 1px solid #aaa;
     border-radius: 8px;
     padding: 10px;
-    max-width: 600px;
-    margin: 20px auto;
+    color: white;
+    font-size: 14px;
+    z-index: 999;
     text-align: left;
-    overflow-y: auto;
-    max-height: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 #logList {
