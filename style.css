@@ -65,3 +65,29 @@ h1, h2, h3 {
     color: #fff; /* Başlık yazı rengi beyaz */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hafif gölge efekti */
 }
+
+/* Battle Log */
+.log-box {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+#logList {
+    list-style-type: none;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+#logList li {
+    margin-bottom: 5px;
+    border-left: 2px solid white;
+    padding-left: 8px;
+}

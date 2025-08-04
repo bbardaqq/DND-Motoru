@@ -24,8 +24,10 @@ function calculateA() {
     if (rastgelesayi < num5) {
         
         document.getElementById("resultA").innerText = "Vurus Basarili";
+        logMessage("Vurus Basarili! Oran: %" + (num5 * 100).toFixed(1));
         } else {
         document.getElementById("resultA").innerText = "Vurus Basarisiz";
+        logMessage("Vurus Basarisiz. Oran: %" + (num5 * 100).toFixed(1));
         }
     //document.getElementById('resultA').textContent = result;
 }
@@ -43,6 +45,7 @@ function calculateB() {
     const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir.
     const result = num5*num6*num7; // Hesaplama
     document.getElementById('resultB').textContent = result;
+    logMessage("Hasar Hesaplandı: " + result.toFixed(2));
 }
 
 // Ana menüye dönüş
@@ -52,4 +55,12 @@ function reset() {
     document.getElementById('calculationB').classList.add('hidden');
     document.getElementById('resultA').textContent = '0';
     document.getElementById('resultB').textContent = '0';
+}
+
+function logMessage(msg) {
+    const logList = document.getElementById("logList");
+    const li = document.createElement("li");
+    const time = new Date().toLocaleTimeString();
+    li.textContent = `[${time}] ${msg}`;
+    logList.prepend(li); // En üste ekle
 }
