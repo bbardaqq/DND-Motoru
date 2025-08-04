@@ -106,3 +106,23 @@ h1, h2, h3 {
     color: #ff6a6a; /* kırmızı */
     font-weight: bold;
 }
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log-controls button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.log-controls button:hover {
+    color: #ff6a6a;
+}

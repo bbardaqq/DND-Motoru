@@ -53,7 +53,13 @@
     </div>
     <!-- Log Box -->
     <div id="battleLog" class="log-box">
-        <h3>Battle Log</h3>
+        <div class="log-header">
+          <h3>Battle Log</h3>
+          <div class="log-controls">
+            <button onclick="toggleLog()">–</button>
+            <button onclick="clearLog()">🗑</button>
+          </div>
+        </div>
         <ul id="logList"></ul>
       </div>
 

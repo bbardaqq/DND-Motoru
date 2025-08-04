@@ -57,15 +57,39 @@ function reset() {
     document.getElementById('resultB').textContent = '0';
 }
 
+let logCount = 0;
+let logHidden = false;
+
 function logMessage(msg) {
     const logList = document.getElementById("logList");
     const li = document.createElement("li");
     const time = new Date().toLocaleTimeString();
     li.textContent = `[${time}] ${msg}`;
+
     if (msg.includes("Basarili")) {
         li.classList.add("log-success");
     } else if (msg.includes("Basarisiz")) {
         li.classList.add("log-fail");
     }
-    logList.prepend(li); // En üste ekle
+
+    logList.prepend(li);
+    logCount++;
+
+    // Otomatik temizleme
+    if (logCount > 50) {
+        clearLog();
+        logMessage("⛔ Otomatik temizlendi (50 kayıt sınırı)");
+    }
+}
+
+function clearLog() {
+    const logList = document.getElementById("logList");
+    logList.innerHTML = "";
+    logCount = 0;
+}
+
+function toggleLog() {
+    const logList = document.getElementById("logList");
+    logHidden = !logHidden;
+    logList.style.display = logHidden ? "none" : "block";
 }
