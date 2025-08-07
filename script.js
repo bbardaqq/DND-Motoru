@@ -35,14 +35,18 @@ function calculateA() {
 
 // B Seçeneği hesaplaması: Hasarı Hesaplar
 function calculateB() {
-    const num1 = parseFloat(document.getElementById('bNum1').value); //aralik1 buyuk olan
-    const num2 = parseFloat(document.getElementById('bNum2').value); //aralik2 kucuk olan
-    const num3 = parseFloat(document.getElementById('bNum3').value); //ek hasar yuzdelik olarak girilecek
-    const num4 = parseFloat(document.getElementById('bNum4').value); //base skill puanı tam haliyle girilecek
+    const num1 = parseFloat(document.getElementById('bNum1').value); //aralik1 
+    const num2 = parseFloat(document.getElementById('bNum2').value); //aralik2 
+    const num3 = parseFloat(document.getElementById('bNum3').value); //ek hasar yuzdelik olarak girilecek (%50 ise direkt 50 yazılacak, 100 ise 100 yazılacak)
+    const num4 = parseFloat(document.getElementById('bNum4').value); //base skill puanı tam haliyle girilecek (skill puanı 10 ise 10 yazılacak, 15 ise 15 yazılacak)
 
-    const num5 = Math.floor(Math.random() * ((num1 - num2) + 1)) + num2; // Vurus araligindan rastgele sayi ceker. Ornegin 10-15 ise 10-15 arasindan bir sayi ceker.
-    const num6 = 1+ (num3/100); // Yuzdelik hasar hesabi
-    const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir.
+    const lower = Math.min(num1, num2); // Aralıkların en küçüğü
+    const upper = Math.max(num1, num2); // Aralıkların en büyüğü
+
+
+    const num5 = Math.floor(Math.random() * ((upper - lower) + 1)) + lower; // Vurus araligindan rastgele sayi ceker. Ornegin 10-15 ise 10-15 arasindan bir sayi ceker.
+    const num6 = 1+ (num3/100); // Yuzdelik hasar hesabi. Ornegin 50 ise 1.5 olarak hesaplar. 100 ise 2 olarak hesaplar.
+    const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir. Yani 1.05 olarak hesaplar. 10 ise 1 olarak hesaplar.
     const result = num5*num6*num7; // Hesaplama
     document.getElementById('resultB').textContent = result;
     logMessage("Hasar Hesaplandı: " + result.toFixed(2));
