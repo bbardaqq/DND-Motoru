@@ -46,7 +46,7 @@ function calculateB() {
 
     const num5 = Math.floor(Math.random() * ((upper - lower) + 1)) + lower; // Vurus araligindan rastgele sayi ceker. Ornegin 10-15 ise 10-15 arasindan bir sayi ceker.
     const num6 = 1+ (num3/100); // Yuzdelik hasar hesabi. Ornegin 50 ise 1.5 olarak hesaplar. 100 ise 2 olarak hesaplar.
-    const num7 = 1+ ((num4 - 10)/100); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 5% ekstra hasar verir. Yani 1.05 olarak hesaplar. 10 ise 1 olarak hesaplar.
+    const num7 = 1+ ((num4 - 10)/10); // Base skill puanından 10 eksilt ve yuzdelik olarak ekle. Ornegin 15 ise 50% ekstra hasar verir. Yani 1.5 olarak hesaplar. 10 ise 1 olarak hesaplar.
     const result = num5*num6*num7; // Hesaplama
     document.getElementById('resultB').textContent = result;
     logMessage("Hasar Hesaplandı: " + result.toFixed(2));
