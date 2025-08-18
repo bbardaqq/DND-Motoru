@@ -1,5 +1,8 @@
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    color: #f5e6c8;
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -7,9 +10,12 @@ body {
     background-size: cover; /* Resim tüm alanı kaplar */
     background-position: center; /* Ortalanmış */
     background-repeat: no-repeat; /* Tekrar etmez */
-    background-attachment: fixed; /* Sayfa kaydırıldığında arka plan sabit kalır */
-    
+    background-attachment: fixed; /* Sayfa kaydırıldığında arka plan sabit kalır */ 
+
 }
+
+
+
 
 .output {
     color: white; /* Yazı rengi beyaz */
@@ -18,36 +24,26 @@ body {
 }
 
 button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff; /* Mavi buton */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+     font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 10px 15px;
+  background-color: #3e2f1c; /* koyu kahve, ahşap tonu */
+  color: #f5e6c8; /* parşömen sarısı */
+  border: 2px solid #d4af37; /* altın rengi */
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
     transition: background-color 0.3s ease;
 }
 
 /* Buton Hover Efekti */
 button:hover {
-    background-color: #0056b3; /* Hover'da daha koyu mavi */
+  background-color: #d4af37;
+  color: #3e2f1c; /* ahşap rengi */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
 }
 
-/*image {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px; 
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    height: 100%; 
-    padding: 0; 
-    margin: 0;
-}
-*/
 input {
     margin: 5px;
     padding: 10px;
