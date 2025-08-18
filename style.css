@@ -24,17 +24,17 @@ body {
 }
 
 button {
-     font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', cursive;
   font-size: 12px;
   padding: 10px 15px;
   background-color: #3e2f1c; /* koyu kahve, ahşap tonu */
   color: #f5e6c8; /* parşömen sarısı */
-  border: 2px solid #d4af37; /* altın rengi */
+  border: 2px solid #d4af37af; /* altın rengi */
   border-radius: 6px;
   cursor: pointer;
   text-transform: uppercase;
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
-    transition: background-color 0.3s ease;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.425);
+  transition: background-color 0.3s ease;
 }
 
 /* Buton Hover Efekti */
